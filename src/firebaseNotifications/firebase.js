@@ -21,7 +21,7 @@ export const requestForToken = () => {
         console.log('current token for client: ', currentToken);
 
         // Display notification when token is received
-        showNotification('Hi', 'Great one');
+        showNotification('Success !', 'You have been successfully registered to www.abc.com ');
       } else {
         console.log('No registration token available. Request permission to generate one.');
       }

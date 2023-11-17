@@ -1,12 +1,20 @@
-import './App.css';
-import Notification from './firebaseNotifications/Notification'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Register from './Register';
+import Home from './Home';
+import { NotificationProvider } from './NotificationProvider';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Notification />
-    </div>
+    <NotificationProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Register />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </Router>
+    </NotificationProvider>
   );
-}
+};
 
 export default App;
